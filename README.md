@@ -1,4 +1,4 @@
-<img src="res/common/logo/exports/STF-128.png?raw=true" style="width:100px;height:100px;" alt="STF">
+<img src="common/logo/exports/STF-128.png?raw=true" style="width:100px;height:100px;" alt="STF">
 
 [![Build Status](https://travis-ci.org/openstf/stf.svg?branch=master)](https://travis-ci.org/openstf/stf)
 [![Docker Pulls](https://img.shields.io/docker/pulls/openstf/stf.svg)](https://hub.docker.com/r/openstf/stf/)
@@ -201,7 +201,7 @@ stf local --public-ip <your_internal_network_ip_here>
 
 ## Updating
 
-To update your development version, simply pull the repo and run `npm install` again. You may occasionally have to remove the whole `node_modules` and `res/bower_components` folder to prevent NPM or Bower from complaining about version mismatches.
+To update your development version, simply pull the repo and run `npm install` again. You may occasionally have to remove the whole `node_modules` and `bower_components` folder to prevent NPM or Bower from complaining about version mismatches.
 
 ## FAQ
 
@@ -421,7 +421,7 @@ It will do the following:
 
 Then in order to add it officially (only needs to be done once):
 
-1. Add the language to `res/common/lang/langs.json`.
+1. Add the language to `common/lang/langs.json`.
 2. Pull the specific language `tx pull -l <lang>`.
 3. Run `gulp translate`.
 

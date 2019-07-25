@@ -34,8 +34,11 @@ gulp.task('jsonlint', function() {
 gulp.task('eslint', function() {
   return gulp.src([
       'lib/**/*.js'
-    , 'res/**/*.js'
-    , '!res/bower_components/**'
+    , 'app/**/*.js'
+    , 'auth/**/*.js'
+    , 'common/**/*.js'
+    , 'test/**/*.js'
+    , '!/bower_components/**'
     , '*.js'
   ])
     // eslint() attaches the lint output to the "eslint" property
@@ -57,11 +60,11 @@ gulp.task('eslint-cli', function(done) {
 
   var report = cli.executeOnFiles([
     'lib/**/*.js'
-    , 'res/app/**/*.js'
-    , 'res/auth/**/*.js'
-    , 'res/common/**/*.js'
-    , 'res/test/**/*.js'
-    , 'res/web_modules/**/*.js'
+    , 'app/**/*.js'
+    , 'auth/**/*.js'
+    , 'common/**/*.js'
+    , 'test/**/*.js'
+    , 'web_modules/**/*.js'
     , '*.js'
   ])
   var formatter = cli.getFormatter()
@@ -211,7 +214,7 @@ gulp.task('pug', function() {
     ])
     .pipe(pug({
       locals: {
-        // So res/views/docs.pug doesn't complain
+        // So views/docs.pug doesn't complain
         markdownFile: {
           parseContent: function() {
           }
