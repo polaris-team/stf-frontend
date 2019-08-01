@@ -20,6 +20,9 @@
     "quote-props": 0,
     "operator-linebreak": 0
   },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
   "globals": {
     "angular": 1,
     "inject": 1,
